@@ -18,6 +18,9 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      brown: {
+        50: '#6a4e38',
+      },
     },
   },
 }
