@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Slide class="py-5">
+    <Slide>
       <div class="text-center">
         <div class="mx-auto text-4xl mb-4 font-medium">UNRAVEL THE MYSTERY</div>
       </div>
@@ -11,12 +11,25 @@
         </div>
       </div>
     </Slide>
-    <PrimaryButton class="mx-auto">
+    <PrimaryButton
+      class="mx-auto"
+      @click.native="$store.commit('setQuestion', 2)"
+    >
       <div class="text-3xl">Begin!</div>
     </PrimaryButton>
   </div>
 </template>
 
 <script>
-export default {}
+import { mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState({
+      question: (state) => state.question,
+    }),
+  },
+
+  methods: {},
+}
 </script>

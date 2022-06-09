@@ -46,6 +46,17 @@ export default {
     '@nuxt/content',
   ],
 
+  gsap: {
+    extraPlugins: {
+      scrollTo: true,
+      scrollTrigger: true,
+      draggable: true,
+    },
+    extraEases: {
+      expoScaleEase: true,
+    },
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
